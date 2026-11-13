@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AOS-Bench — 大语言模型智能体能管理动态工作负载吗？</title>
+  <meta name="description" content="AOS-Bench 将智能体作为工作负载管理者进行评测：任务随时间到达，共享计算、内存与工作空间，最终由独立验证器检查交付结果。">
+  <meta property="og:title" content="AOS-Bench：会做单个任务，也能管好一串任务吗？">
+  <meta property="og:description" content="从单任务求解到动态工作负载交付：五组模型与框架、共享资源、真实执行案例。">
+  <meta property="og:image" content="https://aos-bench.github.io/assets/social-card.png"><meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://aos-bench.github.io/zh.html"><meta property="og:url" content="https://aos-bench.github.io/zh.html"><meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="cases.css"><link rel="stylesheet" href="languages.css">
+  <link rel="alternate" hreflang="en" href="index.html"><link rel="alternate" hreflang="zh-Hans" href="zh.html">
+  <script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="nav"><a class="brand" href="#"><img src="assets/logo.png" alt="">AOS-Bench</a><nav aria-label="主导航"><a href="#demo">视频</a><a href="#benchmark">评测框架</a><a href="#results">结果</a><a href="#failure-cases">案例</a><a href="#resources">资源</a></nav><div class="language-switch" aria-label="页面语言"><a href="index.html" lang="en">EN</a><a href="zh.html" lang="zh-Hans" aria-current="page">中文</a></div></header>
+<main>
+  <section class="hero wrap">
+    <div class="eyebrow">智能体作为工作负载管理者 <span>研究快照 · 2026 年 11 月 11 日</span></div>
+    <h1>大语言模型智能体<br>能管理<em>动态工作负载</em>吗？</h1>
+    <p class="deck">完成一个任务，只是工作的一部分。当新请求在旧任务结束前不断到来，智能体还能持续交付吗？</p>
+    <p class="authors">Erle Zhu<sup>1*</sup> · Genrui Zhang<sup>2*</sup> · Keyang Hu<sup>1</sup> · Mingyu Su<sup>1</sup> · Hongning Wang<sup>1†</sup></p>
+    <p class="affiliations"><sup>1</sup>清华大学 &nbsp; <sup>2</sup>哥伦比亚大学 &nbsp; <small>* 共同第一作者 · † 通讯作者</small></p>
+    <div class="actions"><a class="button primary" href="https://arxiv.org/abs/2610.33178">arXiv 论文 ↗</a><a class="button" href="assets/paper.pdf">研究快照 PDF ↗</a><a class="button" href="https://github.com/AOS-Bench/AOS-Bench">开源代码 ↗</a><a class="button" href="https://huggingface.co/datasets/AOS-Bench/AOS-Bench-Trajectories-v2">轨迹数据 ↗</a><a class="button" href="#demo">观看介绍视频 ↓</a><a class="button" href="assets/poster.pdf">下载海报 ↗</a></div>
+    <p class="small">本页采用 2026 年 11 月 11 日、rebuttal 之前的论文快照（<code>d9e71fa</code>）。快照 PDF 包含主 Agent 执行占比分析；arXiv 记录的版本历史可能不同。</p>
+    <div class="hero-statement"><span class="signal"></span><strong>单任务求解能力强，不代表工作负载管理能力强。</strong><span>衡量共享资源预算下真正交付了多少工作。</span></div>
+  </section>
+  <section class="film-section" id="demo"><div class="wrap"><div class="section-top"><span class="eyebrow">01 / 真实工作负载与四个失败案例 · 3:06</span><span class="muted">真实事件记录 · 英文旁白与字幕</span></div>
+    <video controls playsinline preload="metadata" poster="assets/video-cover.png" aria-label="AOS-Bench 介绍视频（英文旁白与字幕）"><source src="assets/aos-bench-overview.mp4" type="video/mp4"><track kind="captions" srclang="en" label="English" src="assets/overview.en.vtt">你的浏览器不支持嵌入视频。<a href="assets/aos-bench-overview.mp4">下载视频</a>。</video>
+    <div class="under-film"><span>Heavy stream 55dcdddf · Claude Opus 5 / Claude Code · 真实事件加速回放</span><a href="assets/aos-bench-overview.mp4" download>下载 MP4 ↓</a></div>
+    <p class="muted">这里展示单次运行，而非汇总结果：20 个任务，18 个报告完成，15 个获得原始满分。布局参考论文 Fig. 2，资源遥测的时间对齐为估计值。旁白使用英文合成声音。<a href="assets/heavy-example.json">查看回放数据</a></p>
+    <p class="muted language-note">本页正文与交互已提供中文；论文原图、论文 PDF、海报及视频保留英文版本。</p>
+  </div></section>
+  <section class="wrap section" id="benchmark"><span class="eyebrow">02 / 以整个工作负载为评测单位</span><h2>新任务不断到来，<br>智能体持续工作。</h2>
+    <div class="split"><div><p>在<strong>流式执行（stream）</strong>中，外部调度器按时间释放任务。智能体查看已到达的请求、领取下一项任务，再通过工具和子代理组织执行。</p><p>所有任务共享<strong>4 个 CPU 核心、8 GiB 内存配额和同一个工作空间</strong>。独立验证器检查最终产物；智能体自己报告“完成”，并不等于任务正确。</p><div class="modes" role="group" aria-label="任务到达方式"><button class="active" data-mode="stream" aria-pressed="true">流式到达</button><button data-mode="burst" aria-pressed="false">一次性到达</button><button data-mode="individual" aria-pressed="false">独立执行</button></div><p id="mode-description" class="small">任务随时间到达，由同一个智能体系统管理共享工作负载。</p><button id="replay" class="text-button">重新播放到达过程 ↺</button></div>
+    <div class="simulation" aria-label="任务到达方式示意动画"><div class="sim-head"><span id="sim-label">流式到达</span><span>示意动画，非真实实验轨迹</span></div><div class="queue" id="queue"><div>构建项目</div><div>处理数据</div><div>转换视频</div><div>运行测试</div></div><div class="sim-agent">智能体系统 <span>领取 · 委派 · 检查进展</span></div><div id="sim-budget">共享工作空间 · 4 CPU 核心 · 8 GiB</div><div class="sim-progress"><i></i></div></div></div>
+    <figure class="paper-figure"><img loading="lazy" src="assets/framework.png" alt="论文评测框架：调度器向共享环境中的智能体释放任务，独立验证器检查最终产物。"><figcaption>论文中的评测框架。图中子代理组织方式仅为示例，评测不规定内部执行拓扑。</figcaption></figure>
+    <div class="study"><div><strong>5</strong><span>组模型与执行框架</span></div><div><strong>10 × 10</strong><span>中负载：工作负载数 × 任务数</span></div><div><strong>5 × 20</strong><span>重负载：工作负载数 × 任务数</span></div><div><strong>3</strong><span>每个工作负载的目标重复次数</span></div></div>
+  </section>
+  <section class="tinted"><div class="wrap section"><span class="eyebrow">03 / 构建可验证的工作负载</span><h2>从有验证器的任务，<br>到共享执行环境。</h2><p class="section-intro">统一任务格式、标定资源需求、合并执行环境，再验证组合后的工作负载。未通过检查的候选需要修复并重新验证。</p>
+    <div class="pipeline"><div><b>01</b>收集任务<small>指令、输入资源、验证器</small></div><div><b>02</b>资源标定<small>执行时长与 CPU 利用率</small></div><div><b>03</b>组合环境<small>共享镜像与一致的文件路径</small></div><div><b>04</b>验证准入<small>审计 · 构建 · 参考解 · 重叠检查</small></div></div>
+    <figure class="paper-figure"><img loading="lazy" src="assets/synthesis.png" alt="论文原始数据合成流程，包括资源标定、工作负载组合和四项验证检查。"><figcaption>构建池包含 26 个工作负载、60 个任务、280 个任务实例，含轻负载与 30-task case。主要比较使用中负载和重负载。</figcaption></figure>
+  </div></section>
+  <section class="wrap section" id="results"><span class="eyebrow">04 / 预印本的核心发现</span><h2>单任务能力不能直接决定<br>工作负载的交付表现。</h2>
+    <div class="result-cards"><article><strong>13.0–22.7 pp</strong><h3>重负载下的表现损失</h3><p>相较于独立执行的能力参考，所有被测系统在重负载下的平均任务奖励均下降了 13.0–22.7 个百分点。</p></article><article><strong>0.6 → 14.2 pp</strong><h3>相近能力，不同交付</h3><p>在中负载中，GLM 与 Kimi 的独立执行 SR 仅差 0.6 个百分点，流式执行时却相差 14.2 个百分点。</p></article><article><strong>不足 4 pp</strong><h3>简单并发基线已很接近</h3><p>对 GLM，固定并发数为 2，与每个档位中最佳智能体管理策略的差距均不足 4 个百分点。</p></article></div>
+    <div class="chart-header"><h3>比较五个系统</h3><div class="modes" role="group" aria-label="结果负载档位"><button class="active" data-tier="all" aria-pressed="true">两个档位</button><button data-tier="Medium" aria-pressed="false">中负载</button><button data-tier="Heavy" aria-pressed="false">重负载</button></div></div>
+    <div id="results-chart" role="img" aria-label="按模型分组的 SR：每组比较中负载独立执行、中负载流式执行、重负载独立执行和重负载流式执行。"></div>
+    <p class="small">SR 为每个计分任务的平均验证奖励，包含部分得分。pp 表示百分点。在同一档位内比较独立与流式执行；不同档位的任务组成不同。数值沿用 10 月预印本。</p>
+    <details><summary>查看全部 20 个数值</summary><div class="table-scroll"><table id="results-table"><thead><tr><th>模型</th><th>中负载·独立</th><th>中负载·流式</th><th>重负载·独立</th><th>重负载·流式</th></tr></thead><tbody></tbody></table></div></details>
+    <div class="finding"><span>不仅看速度</span><p>在中负载下，有效奖励吞吐率为各系统自身顺序执行参考的 <strong>1.49–2.22 倍</strong>。交付更快与单任务奖励下降可以同时发生。</p></div>
+  </section>
+  <section class="tinted"><div class="wrap section"><span class="eyebrow">05 / 看清执行过程</span><h2>接入任务，<br>也是工作的重要部分。</h2><div class="analysis-grid"><article><h3>串行接入让任务留在队列里</h3><p>GLM 的串行 FIFO 策略在重负载下，有 <strong>73.3% 的已释放任务从未被领取</strong>。固定并发 k = 2 的 SR 为 42.8%，原生管理为 44.4%。</p><img loading="lazy" src="assets/mechanism.png" alt="论文原图：GLM 执行策略、领取延迟和未领取任务比例。"></article><article><h3>同一输入，重复运行也可能不同</h3><p>对同一个 30-task 工作负载，预印本记录的<strong>最终报告完成数为 30、6、30</strong>。严格按六小时时限计算，则为 <strong>30、5、30</strong>：低交付运行的第六次完成晚于时限。这些是报告完成数，不是验证成功数。</p><img loading="lazy" src="assets/case.png" alt="预印本原始案例图使用最终报告完成数，包含 Kimi 低交付运行中晚于时限的第六次完成。"></article></div>
+    <div class="main-agent-analysis"><h3>谁在执行任务，同样重要</h3><p>在 rebuttal 前的分析中，主 Agent 执行工具调用占比每增加 10 个百分点，与同工作负载中心化后的<strong>单次运行奖励降低 3.9 个百分点</strong>、<strong>领取覆盖率降低 5.2 个百分点</strong>相关。任务在主 Agent 执行前台命令时到达，其领取等待时间的中位数为同次运行中其他任务的 <strong>2.0 倍</strong>。</p><figure class="paper-figure"><img loading="lazy" src="assets/main-agent-work.png" alt="主 Agent 执行占比及其与工作负载奖励的观察性关联。"><figcaption>来源：rebuttal 前快照第 4.2 节。结果是观察性关联，不是因果效应；工作负载中心化奖励图包含 180 次运行。GPT 因被测执行框架没有委派工具而未纳入该图。</figcaption></figure></div>
+    <details class="scope"><summary>研究范围、计分与版本说明</summary><p>结果对应模型与执行框架的组合，而不是单独模型的排名。推断受限于 10 个中负载和 5 个重负载工作负载；重负载的置信区间只能作粗略检查。任务没有显式依赖、价值或优先级。独立执行是能力参考，不是等资源成本基线。</p><p>计分对称排除 11 个无法由验证器有效判断的任务；首次采样内存超配额之后完成的任务不计奖励。历史运行中存在超时后活动及共享产物影响。本页保留 rebuttal 之前的 <code>d9e71fa</code> 论文快照，不混入 rebuttal 修订分数；当前公开代码可能已包含后续工程修复。30-task 分析属于个案研究。</p></details>
+  </div></section>
+  <section class="wrap section" id="failure-cases"><span class="eyebrow">06 / 四个具体失败案例</span><h2>失败，<br>具体是什么样子？</h2><p class="section-intro">队列里的任务无人接入、第一项难题占住整个运行、重复试验不稳定、漏掉一条硬约束。以下记录用于解释不同失败机制，不代表各系统的失败率。</p><div id="case-cards" class="case-grid"></div><noscript><p>启用 JavaScript 查看案例卡片，或<a href="assets/failure-cases.zh.json">阅读中文案例摘要与证据</a>。</p></noscript></section>
+  <section class="wrap section" id="resources"><span class="eyebrow">07 / 资源与后续研究</span><h2>把工作负载管理，<br>纳入智能体评测。</h2><div class="resource-grid"><article><h3>AOS-Bench-Task</h3><p>任务资源与工作负载包：定时到达计划、共享环境、参考解和验证器。</p><a id="tasks-link" class="button" href="https://github.com/AOS-Bench/AOS-Bench-Task">仓库 · 等待公开发布</a></article><article><h3>Harbor-AOS</h3><p>执行框架扩展：任务流、调度器集成、共享执行和工作负载验证。</p><a id="harness-link" class="button" href="https://github.com/AOS-Bench/Harbor-AOS">仓库 · 等待公开发布</a></article></div><p id="release-note" class="small">代码正在准备公开发布。在开放之前，访问仓库链接可能需要权限。</p>
+    <div class="citation"><div><h3>引用本工作</h3><button id="copy-citation" class="text-button">复制 BibTeX</button><span id="copy-status" aria-live="polite"></span></div><pre id="citation">@misc{zhu2026aosbench,
+  title={AOS-Bench: Can LLM Agents Manage Dynamic Workloads?},
+  author={Zhu, Erle and Zhang, Genrui and Hu, Keyang and
+          Su, Mingyu and Wang, Hongning},
+  year={2026},
+  eprint={2610.33178},
+  archivePrefix={arXiv},
+  url={https://arxiv.org/abs/2610.33178},
+  note={Preprint}
+}</pre></div>
+  </section>
+</main><footer class="wrap"><span>AOS-Bench · 智能体作为工作负载管理者</span><a href="mailto:erlerzhu@gmail.com">联系作者 ↗</a><span>论文图表与研究结果归原作者所有。</span></footer>
+</body></html>

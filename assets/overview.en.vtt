@@ -1,0 +1,91 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+An agent can solve one task. Can it manage twenty arriving requests?
+
+00:00:04.000 --> 00:00:08.000
+AOS-Bench evaluates the agent as a workload manager.
+
+00:00:08.000 --> 00:00:12.000
+This is a real heavy workload: 55dcdddf, with twenty tasks.
+
+00:00:12.000 --> 00:00:16.000
+Tasks include video processing, Bayesian sampling, and aggregation of four hundred million rows.
+
+00:00:16.000 --> 00:00:22.000
+Actual dispatcher events drive this replay. The execution clock is accelerated.
+
+00:00:22.000 --> 00:00:28.000
+New requests arrive while the agent and its delegated subagents are already working.
+
+00:00:28.000 --> 00:00:34.000
+All work shares four CPUs, an eight GiB allocation, and the same filesystem.
+
+00:00:34.000 --> 00:00:40.000
+All twenty tasks have now arrived. The agent continues to manage unfinished work.
+
+00:00:40.000 --> 00:00:46.000
+We now accelerate through the rest of the recorded execution.
+
+00:00:46.000 --> 00:00:52.000
+Claimed work is not the same as continuously running work, or verified success.
+
+00:00:52.000 --> 00:00:57.000
+After execution ends, independent verifiers inspect the final artifacts.
+
+00:00:57.000 --> 00:01:02.000
+Eighteen tasks were reported complete. Raw verification gives fifteen full, one partial, and four zero rewards.
+
+00:01:02.000 --> 00:01:08.000
+Workloads are assembled from tasks with instructions, environments, and executable verifiers.
+
+00:01:08.000 --> 00:01:16.000
+Calibration, shared-image assembly, and four validation gates define the construction pipeline.
+
+00:01:16.000 --> 00:01:23.000
+Across five systems, heavy workloads reduce per-task reward by thirteen to twenty-three percentage points.
+
+00:01:23.000 --> 00:01:32.000
+Similar isolated ability can produce different workload delivery. Fixed concurrency is a strong baseline.
+
+00:01:32.000 --> 00:01:38.000
+For GLM, fixed concurrency of two comes within four points of the best managed policy in each tier.
+
+00:01:38.000 --> 00:01:45.000
+In one heavy run, GLM holds only one task at a time, although all twenty requests arrive within fifteen minutes.
+
+00:01:45.000 --> 00:01:52.000
+CoreWars takes about seventy-six minutes, followed by ninety minutes on audio transcription.
+
+00:01:52.000 --> 00:01:58.000
+After four hours, thirteen tasks remain unclaimed. Sustained effort does not guarantee workload delivery.
+
+00:01:58.000 --> 00:02:05.000
+DeepSeek claims the first request: infer hydrogen-bonded framework topology from crystal files.
+
+00:02:05.000 --> 00:02:12.000
+It spends six hours developing and debugging the analysis, without claiming another task.
+
+00:02:12.000 --> 00:02:18.000
+The result: zero reported completions, and twenty-nine unclaimed requests.
+
+00:02:18.000 --> 00:02:25.000
+Across identical thirty-task repeats, two Kimi runs report completing every task. Another handles work one at a time.
+
+00:02:25.000 --> 00:02:32.000
+Within six hours, the low-delivery run claims six tasks and reports five complete.
+
+00:02:32.000 --> 00:02:38.000
+The preprint counts six final completions, but the sixth occurs after the time limit.
+
+00:02:38.000 --> 00:02:45.000
+Opus reports repairing a training dataset, with a validation loss of six point four zero seven and a checkpoint.
+
+00:02:45.000 --> 00:02:52.000
+Nine of ten verifier checks pass. But the final workspace contains a modified launcher, which the task forbids.
+
+00:02:52.000 --> 00:03:00.000
+The task receives zero reward. The edit is not fully attributed; a plausible completion report is not proof of correctness.
+
+00:03:00.000 --> 00:03:06.000
+Evaluate workload management as a distinct dimension of agent capability.

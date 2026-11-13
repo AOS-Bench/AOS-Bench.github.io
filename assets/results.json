@@ -1,0 +1,72 @@
+{
+  "paper_commit": "d9e71fa40af05e327c61a0920dae9d4a5482e10b",
+  "value_source": "tables/main_results.tex",
+  "series": [
+    {
+      "key": "medium_ind",
+      "tier": "Medium",
+      "label": "medium-ind",
+      "color": "#A6CEE3"
+    },
+    {
+      "key": "medium_str",
+      "tier": "Medium",
+      "label": "medium-str",
+      "color": "#0072B2"
+    },
+    {
+      "key": "heavy_ind",
+      "tier": "Heavy",
+      "label": "heavy-ind",
+      "color": "#F5C899"
+    },
+    {
+      "key": "heavy_str",
+      "tier": "Heavy",
+      "label": "heavy-str",
+      "color": "#D55E00"
+    }
+  ],
+  "models": [
+    {
+      "name": "Claude Opus 5",
+      "label": "Claude Opus 5",
+      "medium_ind": 81.5,
+      "medium_str": 79.7,
+      "heavy_ind": 75.5,
+      "heavy_str": 62.5
+    },
+    {
+      "name": "Kimi-K3",
+      "label": "Kimi-K3",
+      "medium_ind": 74.3,
+      "medium_str": 68.1,
+      "heavy_ind": 65.3,
+      "heavy_str": 46.0
+    },
+    {
+      "name": "GPT-5.6-sol",
+      "label": "GPT-5.6-sol",
+      "medium_ind": 85.3,
+      "medium_str": 70.9,
+      "heavy_ind": 71.0,
+      "heavy_str": 52.9
+    },
+    {
+      "name": "GLM-5.3",
+      "label": "GLM-5.3",
+      "medium_ind": 74.9,
+      "medium_str": 53.9,
+      "heavy_ind": 60.1,
+      "heavy_str": 44.4
+    },
+    {
+      "name": "DeepSeek-V4-Pro",
+      "label": "DeepSeek-V4-Pro",
+      "medium_ind": 79.5,
+      "medium_str": 54.4,
+      "heavy_ind": 58.1,
+      "heavy_str": 35.4
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "research_snapshot": "d9e71fa40af05e327c61a0920dae9d4a5482e10b",
+  "snapshot_date": "2026-11-11",
+  "scope": "Last manuscript commit before first rebuttal commit",
+  "site_url": "https://aos-bench.github.io/",
+  "arxiv": "https://arxiv.org/abs/2610.33178",
+  "arxiv_version_observed": "v2 (27 October 2026); distinct from the downloadable 11 November snapshot",
+  "code": "https://github.com/AOS-Bench/AOS-Bench",
+  "tasks": "https://github.com/AOS-Bench/AOS-Bench-Task",
+  "harness": "https://github.com/AOS-Bench/Harbor-AOS",
+  "trajectories": "https://huggingface.co/datasets/AOS-Bench/AOS-Bench-Trajectories-v2",
+  "paper_pdf_sha256": "55b16e60f5f7cebc6d2532fa3f5ad9b974742358eb9cd8b2d766a9726e4a5793",
+  "notes": "Aggregate scores follow the snapshot. Documented strict-time case counts are explicitly distinguished. Video and poster cover a subset of the snapshot analyses."
+}

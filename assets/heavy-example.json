@@ -1,0 +1,2812 @@
+{
+  "workload": "v1-heavy-20-55dcdddf",
+  "trial": "v1-heavy-20-55dcdddf__6FLdug2",
+  "trial_date": "2026-09-19",
+  "model": "Claude Opus 5",
+  "harness": "Claude Code",
+  "harness_version": "2.1.241",
+  "cpus": 4,
+  "memory_gib": 8,
+  "tasks": [
+    {
+      "id": "skillsbench-video-filler-word-remover",
+      "number": 1,
+      "label": "Video filler-word clips",
+      "scheduled": 0,
+      "arrived": 0.00018339697271585464,
+      "claimed": 7.115064634941518,
+      "terminal": 499.71782278548926,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": [
+        "input.mp4",
+        "annotations.json",
+        "output.mp4"
+      ]
+    },
+    {
+      "id": "tb2-mcmc-sampling-stan",
+      "number": 2,
+      "label": "RStan posterior sampling",
+      "scheduled": 39,
+      "arrived": 39.01836083736271,
+      "claimed": 47.20864097122103,
+      "terminal": 1083.9633198892698,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": [
+        "data.csv",
+        "hierarchical_model.stan",
+        "posterior_alpha_mean.txt"
+      ]
+    },
+    {
+      "id": "onebrc-onebrc-400m",
+      "number": 3,
+      "label": "400M-row aggregation",
+      "scheduled": 102,
+      "arrived": 102.0471550244838,
+      "claimed": 102.04721394367516,
+      "terminal": 1089.8729896331206,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": [
+        "measurements.txt",
+        "aggregate.c",
+        "result.txt"
+      ]
+    },
+    {
+      "id": "tb2-winning-avg-corewars",
+      "number": 4,
+      "label": "CoreWars warrior",
+      "scheduled": 116,
+      "arrived": 116.0533301141113,
+      "claimed": 166.24999687634408,
+      "terminal": 6598.26155194547,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": [
+        "warriors/",
+        "my_warrior.red"
+      ]
+    },
+    {
+      "id": "tb3-satb-audio-transcription",
+      "number": 5,
+      "label": "SATB audio transcription",
+      "scheduled": 184,
+      "arrived": 184.08428209088743,
+      "claimed": 200.96025990042835,
+      "terminal": 1639.958625210449,
+      "status": "completed",
+      "raw_reward": 0.0,
+      "artifact_names": []
+    },
+    {
+      "id": "skillsbench-energy-ac-optimal-power-flow",
+      "number": 6,
+      "label": "AC optimal power flow",
+      "scheduled": 261,
+      "arrived": 261.11879505869,
+      "claimed": 504.4496553419158,
+      "terminal": 695.5288537442684,
+      "status": "completed",
+      "raw_reward": 0.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb3-interleaved-vigenere",
+      "number": 7,
+      "label": "Vigenere cryptanalysis",
+      "scheduled": 337,
+      "arrived": 337.153989687562,
+      "claimed": 702.9272134145722,
+      "terminal": 7401.996014760807,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb2-tune-mjcf",
+      "number": 8,
+      "label": "MuJoCo model tuning",
+      "scheduled": 376,
+      "arrived": 376.1712682582438,
+      "claimed": 755.1164339696988,
+      "terminal": 1831.0582125345245,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb2-make-mips-interpreter",
+      "number": 9,
+      "label": "MIPS / DOOM interpreter",
+      "scheduled": 424,
+      "arrived": 424.1931340098381,
+      "claimed": 805.9821032956243,
+      "terminal": 3519.8615059088916,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "wildclawbench-02_Code_Intelligence_task_6_benchmark_vlmeval_ocrbench_zh",
+      "number": 10,
+      "label": "OCRBench evaluation",
+      "scheduled": 437,
+      "arrived": 437.19925479311496,
+      "claimed": 895.0004284866154,
+      "terminal": 3007.2623139675707,
+      "status": "failed",
+      "raw_reward": 0.2,
+      "artifact_names": []
+    },
+    {
+      "id": "tb2-caffe-cifar-10",
+      "number": 11,
+      "label": "Caffe / CIFAR-10 training",
+      "scheduled": 487,
+      "arrived": 487.02197706513107,
+      "claimed": 1004.6362028429285,
+      "terminal": 6251.360938448459,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb3-telecom-entity-resolution",
+      "number": 12,
+      "label": "Telecom entity resolution",
+      "scheduled": 535,
+      "arrived": 535.0432192003354,
+      "claimed": 1096.3322045952082,
+      "terminal": 9356.260127322748,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb2-train-fasttext",
+      "number": 13,
+      "label": "fastText sentiment model",
+      "scheduled": 591,
+      "arrived": 591.0688805961981,
+      "claimed": 1591.8647039663047,
+      "terminal": 11649.254938478582,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb3-pretrain-shard-corruption",
+      "number": 14,
+      "label": "Pretraining shard repair",
+      "scheduled": 643,
+      "arrived": 643.0927178291604,
+      "claimed": 1640.0698903379962,
+      "terminal": 10132.51477426663,
+      "status": "completed",
+      "raw_reward": 0.0,
+      "artifact_names": []
+    },
+    {
+      "id": "skillsbench-syzkaller-ppdev-syzlang",
+      "number": 15,
+      "label": "syzkaller descriptions",
+      "scheduled": 681,
+      "arrived": 681.1097036581486,
+      "claimed": 1681.1701524350792,
+      "terminal": 5952.568054345436,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "skillsbench-jpg-ocr-stat",
+      "number": 16,
+      "label": "Receipt OCR to Excel",
+      "scheduled": 703,
+      "arrived": 703.1213988084346,
+      "claimed": 1726.3616454601288,
+      "terminal": 7446.114600075409,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "tb2-fix-ocaml-gc",
+      "number": 17,
+      "label": "OCaml garbage collector",
+      "scheduled": 750,
+      "arrived": 750.1442245645449,
+      "claimed": 1766.1757389409468,
+      "terminal": 9156.064414291643,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "skillsbench-energy-market-pricing",
+      "number": 18,
+      "label": "Energy market pricing",
+      "scheduled": 815,
+      "arrived": 815.1746701281518,
+      "claimed": 1831.1746978508309,
+      "terminal": 2390.9589785588905,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "skillsbench-seismic-phase-picking",
+      "number": 19,
+      "label": "Seismic phase picking",
+      "scheduled": 856,
+      "arrived": 856.1934559894726,
+      "claimed": 1920.260128857568,
+      "terminal": 6634.462302876636,
+      "status": "completed",
+      "raw_reward": 1.0,
+      "artifact_names": []
+    },
+    {
+      "id": "terminalworld-tw_570033",
+      "number": 20,
+      "label": "TerminalWorld task 570033",
+      "scheduled": 913,
+      "arrived": 913.019216556102,
+      "claimed": 1970.3632184462622,
+      "terminal": 7685.758678743616,
+      "status": "failed",
+      "raw_reward": 0.0,
+      "artifact_names": []
+    }
+  ],
+  "delegations": [
+    {
+      "at": 82.85497450828552,
+      "task": 2
+    },
+    {
+      "at": 159.09997463226318,
+      "task": 3
+    },
+    {
+      "at": 194.57097458839417,
+      "task": 4
+    },
+    {
+      "at": 237.5299744606018,
+      "task": 5
+    },
+    {
+      "at": 749.7359745502472,
+      "task": 7
+    },
+    {
+      "at": 799.6419744491577,
+      "task": 8
+    },
+    {
+      "at": 889.2979745864868,
+      "task": 9
+    },
+    {
+      "at": 998.7719745635986,
+      "task": 10
+    },
+    {
+      "at": 1055.9569745063782,
+      "task": 11
+    },
+    {
+      "at": 1626.4829745292664,
+      "task": 13
+    },
+    {
+      "at": 1680.9659745693207,
+      "task": 14
+    },
+    {
+      "at": 1726.1869745254517,
+      "task": 15
+    },
+    {
+      "at": 1766.0589745044708,
+      "task": 16
+    },
+    {
+      "at": 1808.7779746055603,
+      "task": 17
+    },
+    {
+      "at": 1920.0419745445251,
+      "task": 18
+    },
+    {
+      "at": 1970.1439745426178,
+      "task": 19
+    }
+  ],
+  "trace_times": [
+    1.878,
+    6.907,
+    6.945,
+    6.955,
+    15.561,
+    17.56,
+    17.988,
+    17.978,
+    25.243,
+    25.3,
+    25.293,
+    26.718,
+    37.282,
+    37.482,
+    39.369,
+    40.992,
+    47.111,
+    47.113,
+    57.139,
+    58.987,
+    59.515,
+    82.855,
+    88.252,
+    89.55,
+    89.769,
+    110.874,
+    111.982,
+    120.724,
+    121.222,
+    121.952,
+    159.1,
+    166.152,
+    166.409,
+    171.98,
+    194.571,
+    200.865,
+    201.376,
+    207.196,
+    237.53,
+    244.175,
+    244.404,
+    254.969,
+    260.013,
+    265.802,
+    409.061,
+    409.976,
+    431.281,
+    436.889,
+    469.497,
+    478.009,
+    479.722,
+    496.734,
+    497.66,
+    499.625,
+    504.414,
+    512.208,
+    513.677,
+    520.128,
+    520.45,
+    527.724,
+    532.298,
+    542.521,
+    542.776,
+    550.071,
+    563.4,
+    564.681,
+    576.882,
+    577.379,
+    633.273,
+    640.626,
+    658.056,
+    658.696,
+    660.293,
+    667.161,
+    673.042,
+    684.964,
+    685.241,
+    691.421,
+    695.432,
+    702.827,
+    702.863,
+    713.622,
+    749.736,
+    755.021,
+    767.194,
+    799.642,
+    805.888,
+    813.629,
+    816.099,
+    822.142,
+    823.677,
+    831.349,
+    838.343,
+    839.306,
+    889.298,
+    894.906,
+    902.269,
+    903.912,
+    910.189,
+    911.823,
+    923.669,
+    924.127,
+    934.637,
+    936.402,
+    947.448,
+    948.339,
+    998.772,
+    1004.541,
+    1014.046,
+    1055.957,
+    1065.339,
+    1065.809,
+    1070.662,
+    1079.125,
+    1079.513,
+    1083.859,
+    1089.779,
+    1096.23,
+    1106.922,
+    1107.76,
+    1127.529,
+    1127.598,
+    1130.892,
+    1137.948,
+    1147.083,
+    1164.18,
+    1215.182,
+    1221.866,
+    1233.859,
+    1242.669,
+    1266.829,
+    1272.152,
+    1272.504,
+    1289.797,
+    1290.751,
+    1292.791,
+    1300.883,
+    1312.417,
+    1340.462,
+    1349.389,
+    1507.092,
+    1542.95,
+    1545.563,
+    1545.943,
+    1590.573,
+    1591.024,
+    1591.77,
+    1597.028,
+    1600.764,
+    1626.483,
+    1633.073,
+    1639.835,
+    1639.841,
+    1649.166,
+    1680.966,
+    1681.034,
+    1688.531,
+    1726.187,
+    1726.237,
+    1766.059,
+    1766.073,
+    1775.24,
+    1776.054,
+    1808.778,
+    1815.311,
+    1816.362,
+    1822.904,
+    1830.939,
+    1830.941,
+    1844.829,
+    1845.864,
+    1845.968,
+    1867.131,
+    1868.13,
+    1920.042,
+    1920.137,
+    1927.44,
+    1970.144,
+    1970.156,
+    1976.635,
+    1976.839,
+    1991.329,
+    1994.529,
+    2018.235,
+    2018.55,
+    2149.129,
+    2149.34,
+    2155.729,
+    2157.73,
+    2172.252,
+    2172.442,
+    2216.152,
+    2219.33,
+    2306.247,
+    2307.329,
+    2323.63,
+    2330.345,
+    2376.329,
+    2376.73,
+    2390.831,
+    2415.937,
+    2416.132,
+    2467.23,
+    2478.252,
+    2538.93,
+    2539.746,
+    2597.736,
+    2601.331,
+    2608.376,
+    2611.252,
+    2691.541,
+    2692.332,
+    2758.533,
+    2894.032,
+    2902.038,
+    2903.432,
+    2906.332,
+    2917.529,
+    2927.843,
+    2929.73,
+    2981.63,
+    2981.631,
+    2988.629,
+    3007.04,
+    3007.231,
+    3108.532,
+    3110.836,
+    3150.237,
+    3161.03,
+    3195.535,
+    3203.13,
+    3203.14,
+    3239.534,
+    3239.945,
+    3249.629,
+    3249.83,
+    3259.431,
+    3275.035,
+    3276.831,
+    3298.141,
+    3299.342,
+    3374.644,
+    3375.538,
+    3378.13,
+    3384.63,
+    3422.143,
+    3429.631,
+    3429.93,
+    3470.23,
+    3471.631,
+    3471.741,
+    3482.241,
+    3486.335,
+    3500.03,
+    3519.639,
+    3521.229,
+    3536.13,
+    3540.936,
+    3564.229,
+    3565.837,
+    3611.432,
+    3657.531,
+    3659.443,
+    3664.031,
+    3680.732,
+    3688.731,
+    3689.538,
+    3703.846,
+    3709.032,
+    3847.448,
+    3848.136,
+    3857.034,
+    3878.831,
+    3879.634,
+    3915.033,
+    4102.234,
+    4123.731,
+    4126.93,
+    4127.542,
+    4164.135,
+    4167.635,
+    4213.839,
+    4222.035,
+    4223.232,
+    4231.539,
+    4231.734,
+    4284.528,
+    4302.531,
+    4303.43,
+    4318.246,
+    4319.634,
+    4320.736,
+    4478.935,
+    4482.24,
+    4530.339,
+    4540.53,
+    4542.13,
+    4552.331,
+    4562.93,
+    4564.637,
+    4572.631,
+    4583.232,
+    4584.031,
+    4585.137,
+    4613.83,
+    4614.831,
+    4624.629,
+    4624.632,
+    4690.931,
+    4891.333,
+    4893.534,
+    4894.329,
+    4918.229,
+    4924.236,
+    4924.729,
+    4926.534,
+    4932.946,
+    5124.831,
+    5130.046,
+    5153.23,
+    5160.529,
+    5210.63,
+    5213.13,
+    5234.948,
+    5243.133,
+    5292.933,
+    5296.65,
+    5306.757,
+    5314.945,
+    5325.733,
+    5327.632,
+    5340.832,
+    5408.232,
+    5737.935,
+    5738.23,
+    5743.233,
+    5944.631,
+    5946.13,
+    5952.23,
+    5974.531,
+    5976.93,
+    5977.14,
+    6229.141,
+    6233.829,
+    6234.142,
+    6242.829,
+    6243.732,
+    6251.234,
+    6266.467,
+    6266.96,
+    6287.255,
+    6293.929,
+    6574.529,
+    6577.786,
+    6578.376,
+    6589.202,
+    6590.069,
+    6598.133,
+    6605.345,
+    6614.332,
+    6622.93,
+    6625.329,
+    6634.334,
+    6641.93,
+    6643.929,
+    6644.032,
+    6688.441,
+    6689.433,
+    6689.637,
+    6697.73,
+    6700.03,
+    6700.235,
+    6715.034,
+    6715.45,
+    6718.53,
+    7298.032,
+    7299.429,
+    7305.765,
+    7348.785,
+    7348.83,
+    7355.843,
+    7364.229,
+    7365.357,
+    7383.675,
+    7391.632,
+    7392.542,
+    7401.886,
+    7411.119,
+    7411.194,
+    7419.238,
+    7436.294,
+    7438.123,
+    7445.999,
+    7594.938,
+    7611.55,
+    7614.845,
+    7615.835,
+    7615.857,
+    7673.98,
+    7674.873,
+    7685.652,
+    7685.661,
+    7750.876,
+    7750.928,
+    7752.371,
+    7752.614,
+    7931.929,
+    7933.746,
+    7934.13,
+    7967.534,
+    7969.485,
+    8009.745,
+    8019.199,
+    8020.102,
+    8020.136,
+    8093.533,
+    8094.546,
+    8094.843,
+    8166.54,
+    8167.295,
+    8170.647,
+    8171.092,
+    8238.571,
+    8239.196,
+    8239.204,
+    8253.487,
+    8255.128,
+    8256.242,
+    8256.391,
+    8930.783,
+    8931.719,
+    8931.722,
+    8932.189,
+    8932.91,
+    8976.22,
+    8977.887,
+    8986.667,
+    9000.229,
+    9001.474,
+    9011.07,
+    9104.429,
+    9108.501,
+    9108.883,
+    9137.935,
+    9139.228,
+    9155.873,
+    9155.929,
+    9229.649,
+    9229.838,
+    9238.329,
+    9239.33,
+    9240.435,
+    9249.231,
+    9249.248,
+    9321.733,
+    9322.13,
+    9356.069,
+    9356.148,
+    9423.355,
+    9423.44,
+    9423.829,
+    10091.835,
+    10101.934,
+    10102.758,
+    10103.504,
+    10132.413,
+    10132.423,
+    10199.376,
+    10199.379,
+    10201.977,
+    10210.247,
+    10211.944,
+    10213.346,
+    10213.429,
+    10282.327,
+    10282.481,
+    10291.296,
+    10294.111,
+    10294.144,
+    10367.205,
+    10368.727,
+    10382.628,
+    10383.584,
+    10383.849,
+    10448.421,
+    10530.837,
+    10533.182,
+    10533.951,
+    10540.537,
+    10544.059,
+    10564.204,
+    10567.511,
+    10567.759,
+    10588.924,
+    10592.686,
+    10592.9,
+    10662.346,
+    11269.394,
+    11269.877,
+    11269.949,
+    11337.376,
+    11340.252,
+    11609.751,
+    11611.468,
+    11622.583,
+    11629.246,
+    11649.154,
+    11649.162,
+    11654.931,
+    11655.129,
+    11655.155,
+    11674.18
+  ],
+  "telemetry": [
+    {
+      "at": 0,
+      "memory_gib": 3.267,
+      "cpu_percent": 15.57
+    },
+    {
+      "at": 30,
+      "memory_gib": 3.311,
+      "cpu_percent": 20.67
+    },
+    {
+      "at": 60,
+      "memory_gib": 3.383,
+      "cpu_percent": 27.77
+    },
+    {
+      "at": 90,
+      "memory_gib": 3.519,
+      "cpu_percent": 35.79
+    },
+    {
+      "at": 120,
+      "memory_gib": 3.654,
+      "cpu_percent": 44.84
+    },
+    {
+      "at": 150,
+      "memory_gib": 3.494,
+      "cpu_percent": 54.66
+    },
+    {
+      "at": 180,
+      "memory_gib": 3.977,
+      "cpu_percent": 61.12
+    },
+    {
+      "at": 210,
+      "memory_gib": 3.977,
+      "cpu_percent": 62.89
+    },
+    {
+      "at": 240,
+      "memory_gib": 4.381,
+      "cpu_percent": 61.82
+    },
+    {
+      "at": 270,
+      "memory_gib": 4.257,
+      "cpu_percent": 58.0
+    },
+    {
+      "at": 300,
+      "memory_gib": 3.824,
+      "cpu_percent": 55.1
+    },
+    {
+      "at": 330,
+      "memory_gib": 2.108,
+      "cpu_percent": 48.23
+    },
+    {
+      "at": 360,
+      "memory_gib": 0.768,
+      "cpu_percent": 37.76
+    },
+    {
+      "at": 390,
+      "memory_gib": 0.405,
+      "cpu_percent": 36.14
+    },
+    {
+      "at": 420,
+      "memory_gib": 0.419,
+      "cpu_percent": 24.05
+    },
+    {
+      "at": 450,
+      "memory_gib": 0.41,
+      "cpu_percent": 17.51
+    },
+    {
+      "at": 480,
+      "memory_gib": 0.455,
+      "cpu_percent": 12.88
+    },
+    {
+      "at": 510,
+      "memory_gib": 0.456,
+      "cpu_percent": 3.87
+    },
+    {
+      "at": 540,
+      "memory_gib": 0.406,
+      "cpu_percent": 4.14
+    },
+    {
+      "at": 570,
+      "memory_gib": 0.41,
+      "cpu_percent": 9.37
+    },
+    {
+      "at": 600,
+      "memory_gib": 0.566,
+      "cpu_percent": 18.09
+    },
+    {
+      "at": 630,
+      "memory_gib": 2.615,
+      "cpu_percent": 35.92
+    },
+    {
+      "at": 660,
+      "memory_gib": 1.616,
+      "cpu_percent": 44.19
+    },
+    {
+      "at": 690,
+      "memory_gib": 2.056,
+      "cpu_percent": 53.7
+    },
+    {
+      "at": 720,
+      "memory_gib": 1.352,
+      "cpu_percent": 50.38
+    },
+    {
+      "at": 750,
+      "memory_gib": 0.426,
+      "cpu_percent": 37.78
+    },
+    {
+      "at": 780,
+      "memory_gib": 0.64,
+      "cpu_percent": 36.47
+    },
+    {
+      "at": 810,
+      "memory_gib": 0.439,
+      "cpu_percent": 31.0
+    },
+    {
+      "at": 840,
+      "memory_gib": 0.496,
+      "cpu_percent": 31.8
+    },
+    {
+      "at": 870,
+      "memory_gib": 0.437,
+      "cpu_percent": 33.27
+    },
+    {
+      "at": 900,
+      "memory_gib": 0.447,
+      "cpu_percent": 36.92
+    },
+    {
+      "at": 930,
+      "memory_gib": 0.503,
+      "cpu_percent": 34.38
+    },
+    {
+      "at": 960,
+      "memory_gib": 0.453,
+      "cpu_percent": 34.61
+    },
+    {
+      "at": 990,
+      "memory_gib": 0.494,
+      "cpu_percent": 36.07
+    },
+    {
+      "at": 1020,
+      "memory_gib": 0.583,
+      "cpu_percent": 36.34
+    },
+    {
+      "at": 1050,
+      "memory_gib": 0.575,
+      "cpu_percent": 37.68
+    },
+    {
+      "at": 1080,
+      "memory_gib": 0.684,
+      "cpu_percent": 41.99
+    },
+    {
+      "at": 1110,
+      "memory_gib": 0.589,
+      "cpu_percent": 48.38
+    },
+    {
+      "at": 1140,
+      "memory_gib": 0.652,
+      "cpu_percent": 43.6
+    },
+    {
+      "at": 1170,
+      "memory_gib": 0.553,
+      "cpu_percent": 51.47
+    },
+    {
+      "at": 1200,
+      "memory_gib": 0.697,
+      "cpu_percent": 59.09
+    },
+    {
+      "at": 1230,
+      "memory_gib": 1.068,
+      "cpu_percent": 62.0
+    },
+    {
+      "at": 1260,
+      "memory_gib": 1.102,
+      "cpu_percent": 70.42
+    },
+    {
+      "at": 1290,
+      "memory_gib": 1.106,
+      "cpu_percent": 61.26
+    },
+    {
+      "at": 1320,
+      "memory_gib": 0.567,
+      "cpu_percent": 50.35
+    },
+    {
+      "at": 1350,
+      "memory_gib": 0.557,
+      "cpu_percent": 39.29
+    },
+    {
+      "at": 1380,
+      "memory_gib": 0.513,
+      "cpu_percent": 36.04
+    },
+    {
+      "at": 1410,
+      "memory_gib": 0.589,
+      "cpu_percent": 36.39
+    },
+    {
+      "at": 1440,
+      "memory_gib": 0.592,
+      "cpu_percent": 38.73
+    },
+    {
+      "at": 1470,
+      "memory_gib": 0.887,
+      "cpu_percent": 38.08
+    },
+    {
+      "at": 1500,
+      "memory_gib": 0.572,
+      "cpu_percent": 37.43
+    },
+    {
+      "at": 1530,
+      "memory_gib": 1.092,
+      "cpu_percent": 39.95
+    },
+    {
+      "at": 1560,
+      "memory_gib": 0.683,
+      "cpu_percent": 35.7
+    },
+    {
+      "at": 1590,
+      "memory_gib": 0.565,
+      "cpu_percent": 39.64
+    },
+    {
+      "at": 1620,
+      "memory_gib": 0.681,
+      "cpu_percent": 44.08
+    },
+    {
+      "at": 1650,
+      "memory_gib": 0.969,
+      "cpu_percent": 47.3
+    },
+    {
+      "at": 1680,
+      "memory_gib": 1.208,
+      "cpu_percent": 55.98
+    },
+    {
+      "at": 1710,
+      "memory_gib": 0.945,
+      "cpu_percent": 55.21
+    },
+    {
+      "at": 1740,
+      "memory_gib": 0.666,
+      "cpu_percent": 57.04
+    },
+    {
+      "at": 1770,
+      "memory_gib": 0.664,
+      "cpu_percent": 59.73
+    },
+    {
+      "at": 1800,
+      "memory_gib": 0.766,
+      "cpu_percent": 54.77
+    },
+    {
+      "at": 1830,
+      "memory_gib": 0.892,
+      "cpu_percent": 53.8
+    },
+    {
+      "at": 1860,
+      "memory_gib": 0.616,
+      "cpu_percent": 54.42
+    },
+    {
+      "at": 1890,
+      "memory_gib": 0.983,
+      "cpu_percent": 47.94
+    },
+    {
+      "at": 1920,
+      "memory_gib": 0.774,
+      "cpu_percent": 54.18
+    },
+    {
+      "at": 1950,
+      "memory_gib": 0.703,
+      "cpu_percent": 55.26
+    },
+    {
+      "at": 1980,
+      "memory_gib": 2.372,
+      "cpu_percent": 48.66
+    },
+    {
+      "at": 2010,
+      "memory_gib": 1.193,
+      "cpu_percent": 47.2
+    },
+    {
+      "at": 2040,
+      "memory_gib": 1.837,
+      "cpu_percent": 41.35
+    },
+    {
+      "at": 2070,
+      "memory_gib": 2.039,
+      "cpu_percent": 41.03
+    },
+    {
+      "at": 2100,
+      "memory_gib": 1.62,
+      "cpu_percent": 38.88
+    },
+    {
+      "at": 2130,
+      "memory_gib": 2.27,
+      "cpu_percent": 38.42
+    },
+    {
+      "at": 2160,
+      "memory_gib": 3.468,
+      "cpu_percent": 37.46
+    },
+    {
+      "at": 2190,
+      "memory_gib": 2.436,
+      "cpu_percent": 35.03
+    },
+    {
+      "at": 2220,
+      "memory_gib": 2.427,
+      "cpu_percent": 35.69
+    },
+    {
+      "at": 2250,
+      "memory_gib": 2.522,
+      "cpu_percent": 36.27
+    },
+    {
+      "at": 2280,
+      "memory_gib": 3.643,
+      "cpu_percent": 38.4
+    },
+    {
+      "at": 2310,
+      "memory_gib": 2.851,
+      "cpu_percent": 38.75
+    },
+    {
+      "at": 2340,
+      "memory_gib": 4.684,
+      "cpu_percent": 38.48
+    },
+    {
+      "at": 2370,
+      "memory_gib": 5.161,
+      "cpu_percent": 37.52
+    },
+    {
+      "at": 2400,
+      "memory_gib": 5.285,
+      "cpu_percent": 35.12
+    },
+    {
+      "at": 2430,
+      "memory_gib": 4.978,
+      "cpu_percent": 36.06
+    },
+    {
+      "at": 2460,
+      "memory_gib": 2.205,
+      "cpu_percent": 36.33
+    },
+    {
+      "at": 2490,
+      "memory_gib": 6.346,
+      "cpu_percent": 38.01
+    },
+    {
+      "at": 2520,
+      "memory_gib": 7.073,
+      "cpu_percent": 39.17
+    },
+    {
+      "at": 2550,
+      "memory_gib": 4.209,
+      "cpu_percent": 39.4
+    },
+    {
+      "at": 2580,
+      "memory_gib": 4.194,
+      "cpu_percent": 40.26
+    },
+    {
+      "at": 2610,
+      "memory_gib": 4.35,
+      "cpu_percent": 39.68
+    },
+    {
+      "at": 2640,
+      "memory_gib": 4.549,
+      "cpu_percent": 38.91
+    },
+    {
+      "at": 2670,
+      "memory_gib": 2.197,
+      "cpu_percent": 42.7
+    },
+    {
+      "at": 2700,
+      "memory_gib": 4.22,
+      "cpu_percent": 45.84
+    },
+    {
+      "at": 2730,
+      "memory_gib": 4.556,
+      "cpu_percent": 42.7
+    },
+    {
+      "at": 2760,
+      "memory_gib": 1.605,
+      "cpu_percent": 40.63
+    },
+    {
+      "at": 2790,
+      "memory_gib": 1.668,
+      "cpu_percent": 34.47
+    },
+    {
+      "at": 2820,
+      "memory_gib": 4.691,
+      "cpu_percent": 28.27
+    },
+    {
+      "at": 2850,
+      "memory_gib": 4.589,
+      "cpu_percent": 28.3
+    },
+    {
+      "at": 2880,
+      "memory_gib": 4.684,
+      "cpu_percent": 27.77
+    },
+    {
+      "at": 2910,
+      "memory_gib": 1.723,
+      "cpu_percent": 28.1
+    },
+    {
+      "at": 2940,
+      "memory_gib": 1.714,
+      "cpu_percent": 28.06
+    },
+    {
+      "at": 2970,
+      "memory_gib": 4.516,
+      "cpu_percent": 28.36
+    },
+    {
+      "at": 3000,
+      "memory_gib": 4.843,
+      "cpu_percent": 28.77
+    },
+    {
+      "at": 3030,
+      "memory_gib": 4.938,
+      "cpu_percent": 28.49
+    },
+    {
+      "at": 3060,
+      "memory_gib": 4.754,
+      "cpu_percent": 28.35
+    },
+    {
+      "at": 3090,
+      "memory_gib": 4.911,
+      "cpu_percent": 28.21
+    },
+    {
+      "at": 3120,
+      "memory_gib": 4.4,
+      "cpu_percent": 27.84
+    },
+    {
+      "at": 3150,
+      "memory_gib": 4.314,
+      "cpu_percent": 27.94
+    },
+    {
+      "at": 3180,
+      "memory_gib": 4.347,
+      "cpu_percent": 28.62
+    },
+    {
+      "at": 3210,
+      "memory_gib": 4.575,
+      "cpu_percent": 28.99
+    },
+    {
+      "at": 3240,
+      "memory_gib": 4.692,
+      "cpu_percent": 29.34
+    },
+    {
+      "at": 3270,
+      "memory_gib": 4.363,
+      "cpu_percent": 29.26
+    },
+    {
+      "at": 3300,
+      "memory_gib": 4.475,
+      "cpu_percent": 28.64
+    },
+    {
+      "at": 3330,
+      "memory_gib": 4.355,
+      "cpu_percent": 28.54
+    },
+    {
+      "at": 3360,
+      "memory_gib": 4.43,
+      "cpu_percent": 28.6
+    },
+    {
+      "at": 3390,
+      "memory_gib": 4.705,
+      "cpu_percent": 28.61
+    },
+    {
+      "at": 3420,
+      "memory_gib": 4.828,
+      "cpu_percent": 29.16
+    },
+    {
+      "at": 3450,
+      "memory_gib": 4.924,
+      "cpu_percent": 29.07
+    },
+    {
+      "at": 3480,
+      "memory_gib": 4.919,
+      "cpu_percent": 29.51
+    },
+    {
+      "at": 3510,
+      "memory_gib": 4.658,
+      "cpu_percent": 30.09
+    },
+    {
+      "at": 3540,
+      "memory_gib": 4.819,
+      "cpu_percent": 30.62
+    },
+    {
+      "at": 3570,
+      "memory_gib": 5.069,
+      "cpu_percent": 31.17
+    },
+    {
+      "at": 3600,
+      "memory_gib": 5.854,
+      "cpu_percent": 31.2
+    },
+    {
+      "at": 3630,
+      "memory_gib": 6.077,
+      "cpu_percent": 30.72
+    },
+    {
+      "at": 3660,
+      "memory_gib": 6.2,
+      "cpu_percent": 30.04
+    },
+    {
+      "at": 3690,
+      "memory_gib": 5.242,
+      "cpu_percent": 29.93
+    },
+    {
+      "at": 3720,
+      "memory_gib": 5.517,
+      "cpu_percent": 29.46
+    },
+    {
+      "at": 3750,
+      "memory_gib": 4.995,
+      "cpu_percent": 29.3
+    },
+    {
+      "at": 3780,
+      "memory_gib": 5.334,
+      "cpu_percent": 29.49
+    },
+    {
+      "at": 3810,
+      "memory_gib": 7.031,
+      "cpu_percent": 29.77
+    },
+    {
+      "at": 3840,
+      "memory_gib": 5.023,
+      "cpu_percent": 31.05
+    },
+    {
+      "at": 3870,
+      "memory_gib": 4.947,
+      "cpu_percent": 32.24
+    },
+    {
+      "at": 3900,
+      "memory_gib": 5.004,
+      "cpu_percent": 33.47
+    },
+    {
+      "at": 3930,
+      "memory_gib": 5.009,
+      "cpu_percent": 34.43
+    },
+    {
+      "at": 3960,
+      "memory_gib": 5.684,
+      "cpu_percent": 34.83
+    },
+    {
+      "at": 3990,
+      "memory_gib": 5.58,
+      "cpu_percent": 35.15
+    },
+    {
+      "at": 4020,
+      "memory_gib": 5.102,
+      "cpu_percent": 35.12
+    },
+    {
+      "at": 4050,
+      "memory_gib": 5.342,
+      "cpu_percent": 34.72
+    },
+    {
+      "at": 4080,
+      "memory_gib": 6.034,
+      "cpu_percent": 33.35
+    },
+    {
+      "at": 4110,
+      "memory_gib": 5.901,
+      "cpu_percent": 32.42
+    },
+    {
+      "at": 4140,
+      "memory_gib": 5.862,
+      "cpu_percent": 30.91
+    },
+    {
+      "at": 4170,
+      "memory_gib": 5.064,
+      "cpu_percent": 29.89
+    },
+    {
+      "at": 4200,
+      "memory_gib": 2.272,
+      "cpu_percent": 30.35
+    },
+    {
+      "at": 4230,
+      "memory_gib": 5.152,
+      "cpu_percent": 30.52
+    },
+    {
+      "at": 4260,
+      "memory_gib": 5.526,
+      "cpu_percent": 30.52
+    },
+    {
+      "at": 4290,
+      "memory_gib": 5.265,
+      "cpu_percent": 30.5
+    },
+    {
+      "at": 4320,
+      "memory_gib": 5.177,
+      "cpu_percent": 29.52
+    },
+    {
+      "at": 4350,
+      "memory_gib": 5.12,
+      "cpu_percent": 28.23
+    },
+    {
+      "at": 4380,
+      "memory_gib": 5.082,
+      "cpu_percent": 28.94
+    },
+    {
+      "at": 4410,
+      "memory_gib": 5.351,
+      "cpu_percent": 30.42
+    },
+    {
+      "at": 4440,
+      "memory_gib": 5.139,
+      "cpu_percent": 31.13
+    },
+    {
+      "at": 4470,
+      "memory_gib": 4.758,
+      "cpu_percent": 31.45
+    },
+    {
+      "at": 4500,
+      "memory_gib": 4.893,
+      "cpu_percent": 31.6
+    },
+    {
+      "at": 4530,
+      "memory_gib": 4.314,
+      "cpu_percent": 30.79
+    },
+    {
+      "at": 4560,
+      "memory_gib": 4.526,
+      "cpu_percent": 31.52
+    },
+    {
+      "at": 4590,
+      "memory_gib": 4.506,
+      "cpu_percent": 32.96
+    },
+    {
+      "at": 4620,
+      "memory_gib": 4.407,
+      "cpu_percent": 34.67
+    },
+    {
+      "at": 4650,
+      "memory_gib": 4.319,
+      "cpu_percent": 34.5
+    },
+    {
+      "at": 4680,
+      "memory_gib": 4.324,
+      "cpu_percent": 34.09
+    },
+    {
+      "at": 4710,
+      "memory_gib": 4.528,
+      "cpu_percent": 32.58
+    },
+    {
+      "at": 4740,
+      "memory_gib": 4.294,
+      "cpu_percent": 28.99
+    },
+    {
+      "at": 4770,
+      "memory_gib": 5.091,
+      "cpu_percent": 28.39
+    },
+    {
+      "at": 4800,
+      "memory_gib": 5.112,
+      "cpu_percent": 27.57
+    },
+    {
+      "at": 4830,
+      "memory_gib": 5.004,
+      "cpu_percent": 28.24
+    },
+    {
+      "at": 4860,
+      "memory_gib": 5.227,
+      "cpu_percent": 28.54
+    },
+    {
+      "at": 4890,
+      "memory_gib": 5.163,
+      "cpu_percent": 28.58
+    },
+    {
+      "at": 4920,
+      "memory_gib": 5.228,
+      "cpu_percent": 29.24
+    },
+    {
+      "at": 4950,
+      "memory_gib": 4.737,
+      "cpu_percent": 29.16
+    },
+    {
+      "at": 4980,
+      "memory_gib": 4.982,
+      "cpu_percent": 30.01
+    },
+    {
+      "at": 5010,
+      "memory_gib": 4.809,
+      "cpu_percent": 29.71
+    },
+    {
+      "at": 5040,
+      "memory_gib": 5.034,
+      "cpu_percent": 29.49
+    },
+    {
+      "at": 5070,
+      "memory_gib": 5.251,
+      "cpu_percent": 29.83
+    },
+    {
+      "at": 5100,
+      "memory_gib": 2.356,
+      "cpu_percent": 29.64
+    },
+    {
+      "at": 5130,
+      "memory_gib": 2.276,
+      "cpu_percent": 29.8
+    },
+    {
+      "at": 5160,
+      "memory_gib": 2.457,
+      "cpu_percent": 30.03
+    },
+    {
+      "at": 5190,
+      "memory_gib": 2.015,
+      "cpu_percent": 29.5
+    },
+    {
+      "at": 5220,
+      "memory_gib": 2.657,
+      "cpu_percent": 28.86
+    },
+    {
+      "at": 5250,
+      "memory_gib": 1.901,
+      "cpu_percent": 29.19
+    },
+    {
+      "at": 5280,
+      "memory_gib": 1.839,
+      "cpu_percent": 28.38
+    },
+    {
+      "at": 5310,
+      "memory_gib": 2.07,
+      "cpu_percent": 28.54
+    },
+    {
+      "at": 5340,
+      "memory_gib": 2.087,
+      "cpu_percent": 28.5
+    },
+    {
+      "at": 5370,
+      "memory_gib": 2.106,
+      "cpu_percent": 28.85
+    },
+    {
+      "at": 5400,
+      "memory_gib": 2.133,
+      "cpu_percent": 37.52
+    },
+    {
+      "at": 5430,
+      "memory_gib": 2.839,
+      "cpu_percent": 47.56
+    },
+    {
+      "at": 5460,
+      "memory_gib": 0.891,
+      "cpu_percent": 56.32
+    },
+    {
+      "at": 5490,
+      "memory_gib": 0.852,
+      "cpu_percent": 64.67
+    },
+    {
+      "at": 5520,
+      "memory_gib": 1.033,
+      "cpu_percent": 64.55
+    },
+    {
+      "at": 5550,
+      "memory_gib": 1.06,
+      "cpu_percent": 65.57
+    },
+    {
+      "at": 5580,
+      "memory_gib": 1.09,
+      "cpu_percent": 66.93
+    },
+    {
+      "at": 5610,
+      "memory_gib": 1.083,
+      "cpu_percent": 67.94
+    },
+    {
+      "at": 5640,
+      "memory_gib": 1.001,
+      "cpu_percent": 68.26
+    },
+    {
+      "at": 5670,
+      "memory_gib": 1.008,
+      "cpu_percent": 64.4
+    },
+    {
+      "at": 5700,
+      "memory_gib": 0.762,
+      "cpu_percent": 64.63
+    },
+    {
+      "at": 5730,
+      "memory_gib": 0.974,
+      "cpu_percent": 63.96
+    },
+    {
+      "at": 5760,
+      "memory_gib": 0.816,
+      "cpu_percent": 67.78
+    },
+    {
+      "at": 5790,
+      "memory_gib": 0.991,
+      "cpu_percent": 64.54
+    },
+    {
+      "at": 5820,
+      "memory_gib": 1.395,
+      "cpu_percent": 54.49
+    },
+    {
+      "at": 5850,
+      "memory_gib": 3.632,
+      "cpu_percent": 46.84
+    },
+    {
+      "at": 5880,
+      "memory_gib": 4.189,
+      "cpu_percent": 35.18
+    },
+    {
+      "at": 5910,
+      "memory_gib": 1.408,
+      "cpu_percent": 32.33
+    },
+    {
+      "at": 5940,
+      "memory_gib": 2.902,
+      "cpu_percent": 40.55
+    },
+    {
+      "at": 5970,
+      "memory_gib": 2.939,
+      "cpu_percent": 48.72
+    },
+    {
+      "at": 6000,
+      "memory_gib": 0.934,
+      "cpu_percent": 57.14
+    },
+    {
+      "at": 6030,
+      "memory_gib": 1.97,
+      "cpu_percent": 65.92
+    },
+    {
+      "at": 6060,
+      "memory_gib": 0.892,
+      "cpu_percent": 63.82
+    },
+    {
+      "at": 6090,
+      "memory_gib": 0.945,
+      "cpu_percent": 60.03
+    },
+    {
+      "at": 6120,
+      "memory_gib": 0.741,
+      "cpu_percent": 59.57
+    },
+    {
+      "at": 6150,
+      "memory_gib": 0.797,
+      "cpu_percent": 57.66
+    },
+    {
+      "at": 6180,
+      "memory_gib": 3.874,
+      "cpu_percent": 58.48
+    },
+    {
+      "at": 6210,
+      "memory_gib": 4.624,
+      "cpu_percent": 59.78
+    },
+    {
+      "at": 6240,
+      "memory_gib": 5.274,
+      "cpu_percent": 56.95
+    },
+    {
+      "at": 6270,
+      "memory_gib": 5.369,
+      "cpu_percent": 55.19
+    },
+    {
+      "at": 6300,
+      "memory_gib": 5.336,
+      "cpu_percent": 56.24
+    },
+    {
+      "at": 6330,
+      "memory_gib": 5.307,
+      "cpu_percent": 55.13
+    },
+    {
+      "at": 6360,
+      "memory_gib": 5.266,
+      "cpu_percent": 55.14
+    },
+    {
+      "at": 6390,
+      "memory_gib": 5.343,
+      "cpu_percent": 54.55
+    },
+    {
+      "at": 6420,
+      "memory_gib": 5.236,
+      "cpu_percent": 52.41
+    },
+    {
+      "at": 6450,
+      "memory_gib": 5.256,
+      "cpu_percent": 54.53
+    },
+    {
+      "at": 6480,
+      "memory_gib": 5.247,
+      "cpu_percent": 55.32
+    },
+    {
+      "at": 6510,
+      "memory_gib": 5.303,
+      "cpu_percent": 60.4
+    },
+    {
+      "at": 6540,
+      "memory_gib": 0.895,
+      "cpu_percent": 61.84
+    },
+    {
+      "at": 6570,
+      "memory_gib": 0.918,
+      "cpu_percent": 63.0
+    },
+    {
+      "at": 6600,
+      "memory_gib": 0.91,
+      "cpu_percent": 64.5
+    },
+    {
+      "at": 6630,
+      "memory_gib": 0.894,
+      "cpu_percent": 56.86
+    },
+    {
+      "at": 6660,
+      "memory_gib": 0.622,
+      "cpu_percent": 51.97
+    },
+    {
+      "at": 6690,
+      "memory_gib": 0.632,
+      "cpu_percent": 45.94
+    },
+    {
+      "at": 6720,
+      "memory_gib": 0.634,
+      "cpu_percent": 43.0
+    },
+    {
+      "at": 6750,
+      "memory_gib": 0.684,
+      "cpu_percent": 43.04
+    },
+    {
+      "at": 6780,
+      "memory_gib": 0.658,
+      "cpu_percent": 43.8
+    },
+    {
+      "at": 6810,
+      "memory_gib": 0.688,
+      "cpu_percent": 48.86
+    },
+    {
+      "at": 6840,
+      "memory_gib": 0.771,
+      "cpu_percent": 53.6
+    },
+    {
+      "at": 6870,
+      "memory_gib": 1.129,
+      "cpu_percent": 60.22
+    },
+    {
+      "at": 6900,
+      "memory_gib": 0.903,
+      "cpu_percent": 66.54
+    },
+    {
+      "at": 6930,
+      "memory_gib": 1.097,
+      "cpu_percent": 66.83
+    },
+    {
+      "at": 6960,
+      "memory_gib": 0.922,
+      "cpu_percent": 67.34
+    },
+    {
+      "at": 6990,
+      "memory_gib": 0.688,
+      "cpu_percent": 67.82
+    },
+    {
+      "at": 7020,
+      "memory_gib": 1.089,
+      "cpu_percent": 69.02
+    },
+    {
+      "at": 7050,
+      "memory_gib": 0.697,
+      "cpu_percent": 67.74
+    },
+    {
+      "at": 7080,
+      "memory_gib": 0.794,
+      "cpu_percent": 66.97
+    },
+    {
+      "at": 7110,
+      "memory_gib": 0.779,
+      "cpu_percent": 64.36
+    },
+    {
+      "at": 7140,
+      "memory_gib": 0.927,
+      "cpu_percent": 62.24
+    },
+    {
+      "at": 7170,
+      "memory_gib": 0.978,
+      "cpu_percent": 63.47
+    },
+    {
+      "at": 7200,
+      "memory_gib": 0.949,
+      "cpu_percent": 63.57
+    },
+    {
+      "at": 7230,
+      "memory_gib": 0.813,
+      "cpu_percent": 65.43
+    },
+    {
+      "at": 7260,
+      "memory_gib": 0.909,
+      "cpu_percent": 65.78
+    },
+    {
+      "at": 7290,
+      "memory_gib": 0.923,
+      "cpu_percent": 65.64
+    },
+    {
+      "at": 7320,
+      "memory_gib": 0.948,
+      "cpu_percent": 65.8
+    },
+    {
+      "at": 7350,
+      "memory_gib": 0.852,
+      "cpu_percent": 63.07
+    },
+    {
+      "at": 7380,
+      "memory_gib": 1.274,
+      "cpu_percent": 63.07
+    },
+    {
+      "at": 7410,
+      "memory_gib": 1.294,
+      "cpu_percent": 59.1
+    },
+    {
+      "at": 7440,
+      "memory_gib": 0.67,
+      "cpu_percent": 52.92
+    },
+    {
+      "at": 7470,
+      "memory_gib": 0.609,
+      "cpu_percent": 52.42
+    },
+    {
+      "at": 7500,
+      "memory_gib": 0.622,
+      "cpu_percent": 55.07
+    },
+    {
+      "at": 7530,
+      "memory_gib": 0.755,
+      "cpu_percent": 58.87
+    },
+    {
+      "at": 7560,
+      "memory_gib": 0.983,
+      "cpu_percent": 63.06
+    },
+    {
+      "at": 7590,
+      "memory_gib": 0.657,
+      "cpu_percent": 64.83
+    },
+    {
+      "at": 7620,
+      "memory_gib": 0.641,
+      "cpu_percent": 63.21
+    },
+    {
+      "at": 7650,
+      "memory_gib": 0.639,
+      "cpu_percent": 63.69
+    },
+    {
+      "at": 7680,
+      "memory_gib": 5.146,
+      "cpu_percent": 66.59
+    },
+    {
+      "at": 7710,
+      "memory_gib": 5.152,
+      "cpu_percent": 70.46
+    },
+    {
+      "at": 7740,
+      "memory_gib": 4.865,
+      "cpu_percent": 71.33
+    },
+    {
+      "at": 7770,
+      "memory_gib": 5.088,
+      "cpu_percent": 71.46
+    },
+    {
+      "at": 7800,
+      "memory_gib": 5.394,
+      "cpu_percent": 71.42
+    },
+    {
+      "at": 7830,
+      "memory_gib": 5.104,
+      "cpu_percent": 69.79
+    },
+    {
+      "at": 7860,
+      "memory_gib": 5.221,
+      "cpu_percent": 66.82
+    },
+    {
+      "at": 7890,
+      "memory_gib": 4.797,
+      "cpu_percent": 64.9
+    },
+    {
+      "at": 7920,
+      "memory_gib": 0.775,
+      "cpu_percent": 63.07
+    },
+    {
+      "at": 7950,
+      "memory_gib": 0.871,
+      "cpu_percent": 61.33
+    },
+    {
+      "at": 7980,
+      "memory_gib": 0.87,
+      "cpu_percent": 62.85
+    },
+    {
+      "at": 8010,
+      "memory_gib": 0.888,
+      "cpu_percent": 64.0
+    },
+    {
+      "at": 8040,
+      "memory_gib": 0.884,
+      "cpu_percent": 65.0
+    },
+    {
+      "at": 8070,
+      "memory_gib": 0.902,
+      "cpu_percent": 65.01
+    },
+    {
+      "at": 8100,
+      "memory_gib": 0.889,
+      "cpu_percent": 64.32
+    },
+    {
+      "at": 8130,
+      "memory_gib": 0.857,
+      "cpu_percent": 63.94
+    },
+    {
+      "at": 8160,
+      "memory_gib": 0.928,
+      "cpu_percent": 63.48
+    },
+    {
+      "at": 8190,
+      "memory_gib": 0.917,
+      "cpu_percent": 64.65
+    },
+    {
+      "at": 8220,
+      "memory_gib": 0.935,
+      "cpu_percent": 62.26
+    },
+    {
+      "at": 8250,
+      "memory_gib": 0.913,
+      "cpu_percent": 55.82
+    },
+    {
+      "at": 8280,
+      "memory_gib": 0.597,
+      "cpu_percent": 50.1
+    },
+    {
+      "at": 8310,
+      "memory_gib": 0.597,
+      "cpu_percent": 43.64
+    },
+    {
+      "at": 8340,
+      "memory_gib": 0.6,
+      "cpu_percent": 40.84
+    },
+    {
+      "at": 8370,
+      "memory_gib": 0.619,
+      "cpu_percent": 41.67
+    },
+    {
+      "at": 8400,
+      "memory_gib": 0.622,
+      "cpu_percent": 42.17
+    },
+    {
+      "at": 8430,
+      "memory_gib": 0.625,
+      "cpu_percent": 44.73
+    },
+    {
+      "at": 8460,
+      "memory_gib": 0.614,
+      "cpu_percent": 49.32
+    },
+    {
+      "at": 8490,
+      "memory_gib": 0.661,
+      "cpu_percent": 54.46
+    },
+    {
+      "at": 8520,
+      "memory_gib": 0.657,
+      "cpu_percent": 57.54
+    },
+    {
+      "at": 8550,
+      "memory_gib": 0.701,
+      "cpu_percent": 60.82
+    },
+    {
+      "at": 8580,
+      "memory_gib": 0.628,
+      "cpu_percent": 63.73
+    },
+    {
+      "at": 8610,
+      "memory_gib": 5.028,
+      "cpu_percent": 66.54
+    },
+    {
+      "at": 8640,
+      "memory_gib": 5.183,
+      "cpu_percent": 69.95
+    },
+    {
+      "at": 8670,
+      "memory_gib": 5.11,
+      "cpu_percent": 69.41
+    },
+    {
+      "at": 8700,
+      "memory_gib": 5.245,
+      "cpu_percent": 65.55
+    },
+    {
+      "at": 8730,
+      "memory_gib": 5.235,
+      "cpu_percent": 60.53
+    },
+    {
+      "at": 8760,
+      "memory_gib": 5.295,
+      "cpu_percent": 55.82
+    },
+    {
+      "at": 8790,
+      "memory_gib": 5.113,
+      "cpu_percent": 53.77
+    },
+    {
+      "at": 8820,
+      "memory_gib": 5.104,
+      "cpu_percent": 55.83
+    },
+    {
+      "at": 8850,
+      "memory_gib": 4.873,
+      "cpu_percent": 58.46
+    },
+    {
+      "at": 8880,
+      "memory_gib": 0.841,
+      "cpu_percent": 61.96
+    },
+    {
+      "at": 8910,
+      "memory_gib": 0.899,
+      "cpu_percent": 63.6
+    },
+    {
+      "at": 8940,
+      "memory_gib": 0.81,
+      "cpu_percent": 64.62
+    },
+    {
+      "at": 8970,
+      "memory_gib": 0.908,
+      "cpu_percent": 64.0
+    },
+    {
+      "at": 9000,
+      "memory_gib": 0.927,
+      "cpu_percent": 57.19
+    },
+    {
+      "at": 9030,
+      "memory_gib": 0.656,
+      "cpu_percent": 52.8
+    },
+    {
+      "at": 9060,
+      "memory_gib": 0.655,
+      "cpu_percent": 46.62
+    },
+    {
+      "at": 9090,
+      "memory_gib": 0.592,
+      "cpu_percent": 41.52
+    },
+    {
+      "at": 9120,
+      "memory_gib": 0.611,
+      "cpu_percent": 41.51
+    },
+    {
+      "at": 9150,
+      "memory_gib": 0.629,
+      "cpu_percent": 41.66
+    },
+    {
+      "at": 9180,
+      "memory_gib": 0.601,
+      "cpu_percent": 41.64
+    },
+    {
+      "at": 9210,
+      "memory_gib": 0.62,
+      "cpu_percent": 41.31
+    },
+    {
+      "at": 9240,
+      "memory_gib": 0.639,
+      "cpu_percent": 40.81
+    },
+    {
+      "at": 9270,
+      "memory_gib": 0.633,
+      "cpu_percent": 40.54
+    },
+    {
+      "at": 9300,
+      "memory_gib": 0.591,
+      "cpu_percent": 41.12
+    },
+    {
+      "at": 9330,
+      "memory_gib": 0.608,
+      "cpu_percent": 44.82
+    },
+    {
+      "at": 9360,
+      "memory_gib": 0.609,
+      "cpu_percent": 50.8
+    },
+    {
+      "at": 9390,
+      "memory_gib": 0.798,
+      "cpu_percent": 56.31
+    },
+    {
+      "at": 9420,
+      "memory_gib": 0.912,
+      "cpu_percent": 62.28
+    },
+    {
+      "at": 9450,
+      "memory_gib": 0.884,
+      "cpu_percent": 64.76
+    },
+    {
+      "at": 9480,
+      "memory_gib": 0.904,
+      "cpu_percent": 64.89
+    },
+    {
+      "at": 9510,
+      "memory_gib": 0.921,
+      "cpu_percent": 64.69
+    },
+    {
+      "at": 9540,
+      "memory_gib": 0.885,
+      "cpu_percent": 64.07
+    },
+    {
+      "at": 9570,
+      "memory_gib": 0.885,
+      "cpu_percent": 64.18
+    },
+    {
+      "at": 9600,
+      "memory_gib": 0.81,
+      "cpu_percent": 65.48
+    },
+    {
+      "at": 9630,
+      "memory_gib": 0.864,
+      "cpu_percent": 63.3
+    },
+    {
+      "at": 9660,
+      "memory_gib": 0.882,
+      "cpu_percent": 58.2
+    },
+    {
+      "at": 9690,
+      "memory_gib": 0.603,
+      "cpu_percent": 52.42
+    },
+    {
+      "at": 9720,
+      "memory_gib": 0.607,
+      "cpu_percent": 45.65
+    },
+    {
+      "at": 9750,
+      "memory_gib": 0.627,
+      "cpu_percent": 42.19
+    },
+    {
+      "at": 9780,
+      "memory_gib": 0.614,
+      "cpu_percent": 42.72
+    },
+    {
+      "at": 9810,
+      "memory_gib": 0.631,
+      "cpu_percent": 42.59
+    },
+    {
+      "at": 9840,
+      "memory_gib": 0.623,
+      "cpu_percent": 42.56
+    },
+    {
+      "at": 9870,
+      "memory_gib": 0.626,
+      "cpu_percent": 44.89
+    },
+    {
+      "at": 9900,
+      "memory_gib": 0.646,
+      "cpu_percent": 44.16
+    },
+    {
+      "at": 9930,
+      "memory_gib": 0.651,
+      "cpu_percent": 43.94
+    },
+    {
+      "at": 9960,
+      "memory_gib": 0.67,
+      "cpu_percent": 43.86
+    },
+    {
+      "at": 9990,
+      "memory_gib": 0.666,
+      "cpu_percent": 41.54
+    },
+    {
+      "at": 10020,
+      "memory_gib": 0.633,
+      "cpu_percent": 42.33
+    },
+    {
+      "at": 10050,
+      "memory_gib": 0.598,
+      "cpu_percent": 43.42
+    },
+    {
+      "at": 10080,
+      "memory_gib": 0.613,
+      "cpu_percent": 44.21
+    },
+    {
+      "at": 10110,
+      "memory_gib": 0.599,
+      "cpu_percent": 43.88
+    },
+    {
+      "at": 10140,
+      "memory_gib": 0.6,
+      "cpu_percent": 42.82
+    },
+    {
+      "at": 10170,
+      "memory_gib": 0.602,
+      "cpu_percent": 42.08
+    },
+    {
+      "at": 10200,
+      "memory_gib": 0.619,
+      "cpu_percent": 44.37
+    },
+    {
+      "at": 10230,
+      "memory_gib": 0.583,
+      "cpu_percent": 51.3
+    },
+    {
+      "at": 10260,
+      "memory_gib": 0.613,
+      "cpu_percent": 58.31
+    },
+    {
+      "at": 10290,
+      "memory_gib": 1.12,
+      "cpu_percent": 64.05
+    },
+    {
+      "at": 10320,
+      "memory_gib": 1.114,
+      "cpu_percent": 67.07
+    },
+    {
+      "at": 10350,
+      "memory_gib": 1.148,
+      "cpu_percent": 65.39
+    },
+    {
+      "at": 10380,
+      "memory_gib": 1.115,
+      "cpu_percent": 64.89
+    },
+    {
+      "at": 10410,
+      "memory_gib": 1.131,
+      "cpu_percent": 66.37
+    },
+    {
+      "at": 10440,
+      "memory_gib": 1.147,
+      "cpu_percent": 65.2
+    },
+    {
+      "at": 10470,
+      "memory_gib": 0.856,
+      "cpu_percent": 58.91
+    },
+    {
+      "at": 10500,
+      "memory_gib": 0.585,
+      "cpu_percent": 52.76
+    },
+    {
+      "at": 10530,
+      "memory_gib": 0.6,
+      "cpu_percent": 46.34
+    },
+    {
+      "at": 10560,
+      "memory_gib": 0.584,
+      "cpu_percent": 41.77
+    },
+    {
+      "at": 10590,
+      "memory_gib": 0.6,
+      "cpu_percent": 42.23
+    },
+    {
+      "at": 10620,
+      "memory_gib": 0.615,
+      "cpu_percent": 42.39
+    },
+    {
+      "at": 10650,
+      "memory_gib": 0.584,
+      "cpu_percent": 42.56
+    },
+    {
+      "at": 10680,
+      "memory_gib": 0.598,
+      "cpu_percent": 42.22
+    },
+    {
+      "at": 10710,
+      "memory_gib": 0.611,
+      "cpu_percent": 41.93
+    },
+    {
+      "at": 10740,
+      "memory_gib": 0.616,
+      "cpu_percent": 42.12
+    },
+    {
+      "at": 10770,
+      "memory_gib": 0.585,
+      "cpu_percent": 42.04
+    },
+    {
+      "at": 10800,
+      "memory_gib": 0.6,
+      "cpu_percent": 41.94
+    },
+    {
+      "at": 10830,
+      "memory_gib": 0.616,
+      "cpu_percent": 41.96
+    },
+    {
+      "at": 10860,
+      "memory_gib": 0.584,
+      "cpu_percent": 41.9
+    },
+    {
+      "at": 10890,
+      "memory_gib": 0.6,
+      "cpu_percent": 41.87
+    },
+    {
+      "at": 10920,
+      "memory_gib": 0.611,
+      "cpu_percent": 42.09
+    },
+    {
+      "at": 10950,
+      "memory_gib": 0.602,
+      "cpu_percent": 42.31
+    },
+    {
+      "at": 10980,
+      "memory_gib": 0.585,
+      "cpu_percent": 42.31
+    },
+    {
+      "at": 11010,
+      "memory_gib": 0.601,
+      "cpu_percent": 42.41
+    },
+    {
+      "at": 11040,
+      "memory_gib": 0.586,
+      "cpu_percent": 42.5
+    },
+    {
+      "at": 11070,
+      "memory_gib": 0.599,
+      "cpu_percent": 34.43
+    },
+    {
+      "at": 11100,
+      "memory_gib": 0.592,
+      "cpu_percent": 24.55
+    },
+    {
+      "at": 11130,
+      "memory_gib": 0.6,
+      "cpu_percent": 14.22
+    },
+    {
+      "at": 11160,
+      "memory_gib": 0.616,
+      "cpu_percent": 3.88
+    },
+    {
+      "at": 11190,
+      "memory_gib": 0.584,
+      "cpu_percent": 1.15
+    },
+    {
+      "at": 11220,
+      "memory_gib": 0.6,
+      "cpu_percent": 1.12
+    },
+    {
+      "at": 11250,
+      "memory_gib": 0.615,
+      "cpu_percent": 1.13
+    },
+    {
+      "at": 11280,
+      "memory_gib": 0.617,
+      "cpu_percent": 1.14
+    },
+    {
+      "at": 11310,
+      "memory_gib": 0.584,
+      "cpu_percent": 1.15
+    },
+    {
+      "at": 11340,
+      "memory_gib": 0.6,
+      "cpu_percent": 1.14
+    },
+    {
+      "at": 11370,
+      "memory_gib": 0.617,
+      "cpu_percent": 1.78
+    },
+    {
+      "at": 11400,
+      "memory_gib": 0.584,
+      "cpu_percent": 2.11
+    },
+    {
+      "at": 11430,
+      "memory_gib": 0.585,
+      "cpu_percent": 2.17
+    },
+    {
+      "at": 11460,
+      "memory_gib": 0.601,
+      "cpu_percent": 2.99
+    },
+    {
+      "at": 11490,
+      "memory_gib": 0.603,
+      "cpu_percent": 5.67
+    },
+    {
+      "at": 11520,
+      "memory_gib": 0.228,
+      "cpu_percent": 13.57
+    },
+    {
+      "at": 11550,
+      "memory_gib": 0.387,
+      "cpu_percent": 30.87
+    },
+    {
+      "at": 11580,
+      "memory_gib": 0.928,
+      "cpu_percent": 46.15
+    },
+    {
+      "at": 11610,
+      "memory_gib": 1.306,
+      "cpu_percent": 59.8
+    },
+    {
+      "at": 11640,
+      "memory_gib": 0.528,
+      "cpu_percent": 58.09
+    },
+    {
+      "at": 11670,
+      "memory_gib": 0.598,
+      "cpu_percent": 45.79
+    }
+  ],
+  "telemetry_note": "Estimated time alignment from sampled counters; 120 s CPU smoothing.",
+  "exec_end": 11675.878506422043,
+  "verify_start": 11687.854404449463,
+  "verify_end": 12866.244556427002,
+  "summary": {
+    "claimed": 20,
+    "reported_completed": 18,
+    "raw_full_credit": 15,
+    "raw_partial_credit": 1,
+    "raw_zero_credit": 4
+  },
+  "scope": "One recorded run selected to illustrate the protocol; not a representative aggregate. Raw verifier rewards over all 20 declared tasks are not the paper SR after task exclusions.",
+  "topology": "Delegation calls are logged. Claimed-to-terminal spans measure held tasks, not continuous CPU execution."
+}
