@@ -25,6 +25,13 @@
     <p class="small">本页采用 2026 年 11 月 11 日、rebuttal 之前的论文快照（<code>d9e71fa</code>）。快照 PDF 包含主 Agent 执行占比分析；arXiv 记录的版本历史可能不同。</p>
     <div class="hero-statement"><span class="signal"></span><strong>单任务求解能力强，不代表工作负载管理能力强。</strong><span>衡量共享资源预算下真正交付了多少工作。</span></div>
   </section>
+  <section class="wrap lead-insight" id="main-agent-finding" aria-labelledby="main-agent-heading">
+    <span class="eyebrow">核心发现 / 让工作负载管理者保持可响应</span>
+    <h2 id="main-agent-heading">主 Agent 越多亲自执行，<br>整体接入与交付往往越差。</h2>
+    <p class="section-intro">主 Agent 掌握任务领取入口。当它忙于前台执行命令时，新请求可能无法及时接入。真实轨迹显示：主 Agent 执行占比更高，与更低的交付表现、更长的领取等待相关。</p>
+    <div class="lead-metrics"><article><strong>−3.9 pp</strong><h3>单次运行奖励</h3><p>主 Agent 执行工具调用占比每增加 10 个百分点，同工作负载中心化后的奖励平均降低 3.9 个百分点。95% CI：−4.8 至 −2.9 pp。</p></article><article><strong>−5.2 pp</strong><h3>任务领取覆盖率</h3><p>对应同样的执行调用占比变化，领取覆盖率降低 5.2 个百分点。95% CI：−6.4 至 −4.0 pp。</p></article><article><strong>2.0×</strong><h3>领取等待时间比的中位数</h3><p>在主 Agent 前台执行期间到达的任务，比同次运行中的其他任务等待更久。</p></article></div>
+    <p class="small">来源：rebuttal 前快照第 4.2 节。执行占比按工具调用次数计算，不是 CPU 时间占比。这是观察性关联，不是因果效应，也不意味着主 Agent 在所有场景都不应该执行任务。<a href="#main-agent-analysis">查看图表与适用范围 ↓</a></p>
+  </section>
   <section class="film-section" id="demo"><div class="wrap"><div class="section-top"><span class="eyebrow">01 / 真实工作负载与四个失败案例 · 3:06</span><span class="muted">真实事件记录 · 英文旁白与字幕</span></div>
     <video controls playsinline preload="metadata" poster="assets/video-cover.png" aria-label="AOS-Bench 介绍视频（英文旁白与字幕）"><source src="assets/aos-bench-overview.mp4" type="video/mp4"><track kind="captions" srclang="en" label="English" src="assets/overview.en.vtt">你的浏览器不支持嵌入视频。<a href="assets/aos-bench-overview.mp4">下载视频</a>。</video>
     <div class="under-film"><span>Heavy stream 55dcdddf · Claude Opus 5 / Claude Code · 真实事件加速回放</span><a href="assets/aos-bench-overview.mp4" download>下载 MP4 ↓</a></div>

@@ -1,6 +1,8 @@
 const $ = s => document.querySelector(s);
 const zh = document.documentElement.lang.startsWith('zh');
 const tr = (en,cn) => zh ? cn : en;
+const analysisSection = document.querySelector('.main-agent-analysis');
+if (analysisSection) analysisSection.id = 'main-agent-analysis';
 const tierName = tier => tier==='all' ? tr('Both tiers','两个档位') : tier==='Medium' ? tr('Medium','中负载') : tr('Heavy','重负载');
 const seriesLabel = s => zh ? {medium_ind:'中负载·独立',medium_str:'中负载·流式',heavy_ind:'重负载·独立',heavy_str:'重负载·流式'}[s.key] : s.label;
 let clock, resultData;
@@ -98,6 +100,7 @@ fetch(zh?'assets/failure-cases.zh.json':'assets/failure-cases.json').then(r=>{if
     const img=document.createElement('img');img.src=`assets/failure-${c.id}.png`;img.alt=tr(`Illustration of ${c.model}: ${c.title}`,`${c.model} 案例示意：${c.title}（视频英文画面）`);img.loading='lazy';article.append(img);
     add('strong',c.metric,'case-metric');add('p',c.metric_label,'case-metric-label');add('p',c.summary);
     add('p',c.takeaway,'case-takeaway');
+    if(c.id==='opus')add('p',tr('This is a completion-versus-verification case. It is not an established read/write race or cross-task resource conflict. The final launcher changed; who made the edit and why are unresolved.','这个案例说明“报告完成”与“验证通过”的区别，不是已确认的读写竞争或跨任务资源冲突。能确认的是最终启动脚本变了；具体修改者与原因尚未完整归因。'),'case-context');
     const details=document.createElement('details');const summary=document.createElement('summary');summary.textContent=tr('Evidence & interpretation','证据与解释边界');details.append(summary);
     [c.tier,c.trial,c.evidence,c.boundary].forEach(s=>{const p=document.createElement('p');p.textContent=s;details.append(p);});article.append(details);
     const button=add('button',`${tr('Watch case','观看案例')} · ${Math.floor(c.start/60)}:${String(c.start%60).padStart(2,'0')} ↗`,'text-button');
@@ -109,6 +112,12 @@ fetch(zh?'assets/failure-cases.zh.json':'assets/failure-cases.json').then(r=>{if
     });
     $('#case-cards').append(article);
   });
+  const resource=document.createElement('aside');resource.className='resource-note';
+  const heading=document.createElement('h3');heading.textContent=tr('Resource conflicts are a separate failure mechanism','资源冲突是另一类机制');resource.append(heading);
+  for(const sentence of [
+    tr('Package-manager contention: in Opus trial 8f01193a__T9GYpZ5, Stan and Caffe subagents both encounter actual apt/dpkg lock errors. Stan’s install command exits with code 100. Blocking is confirmed; the locking process has not been fully attributed to another task, and final reward loss is not isolated.','包管理器争用：Opus 的 8f01193a__T9GYpZ5 运行中，Stan 与 Caffe 子代理都遇到真实 apt/dpkg 锁错误；Stan 的安装命令返回 exit=100。可以确认安装阻塞，但尚未把持锁进程完整归因到另一任务，也未单独识别它造成的最终分数损失。'),
+    tr('Output-path collision: in Opus trial 4476180b__cQuQ5w7, aggregation and CZICheck testing both require /workspace/result.txt. The test log replaces the statistics; a backup does not help the verifier that reads the fixed path. This is an incompatible benchmark output contract, not proof of a concurrent read/write race.','输出路径冲突：Opus 的 4476180b__cQuQ5w7 运行中，数据聚合和 CZICheck 测试都要求写入 /workspace/result.txt。测试日志覆盖统计结果，备份无法帮助只读取固定路径的验证器。这是基准中不兼容的输出契约，不是已证明的并发读写竞争。')]){const p=document.createElement('p');p.textContent=sentence;resource.append(p);}
+  $('#case-cards').after(resource);
 }).catch(()=>{$('#case-cards').textContent=tr('Case summaries could not load. Please reload the page.','案例摘要加载失败，请刷新页面。');});
 document.querySelectorAll('.language-switch a').forEach(link=>{
   link.addEventListener('click',()=>{link.href=link.getAttribute('href').split('#')[0]+location.hash;});

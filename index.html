@@ -25,6 +25,13 @@
     <p class="small">This page follows the pre-rebuttal manuscript snapshot of 11 November 2026 (<code>d9e71fa</code>). The downloadable snapshot includes its main-agent execution analysis; the arXiv record may have a different version history.</p>
     <div class="hero-statement"><span class="signal"></span><strong>Strong task solvers can still be weak workload managers.</strong><span>Measure the work delivered under a shared budget.</span></div>
   </section>
+  <section class="wrap lead-insight" id="main-agent-finding" aria-labelledby="main-agent-heading">
+    <span class="eyebrow">KEY INSIGHT / KEEP THE WORKLOAD MANAGER AVAILABLE</span>
+    <h2 id="main-agent-heading">When the main agent does more execution,<br>the workload tends to wait longer.</h2>
+    <p class="section-intro">The main agent controls task intake. When it spends time inside foreground execution steps, it can delay accepting new work. In the recorded trials, a larger main-agent execution share is associated with lower delivery and coverage.</p>
+    <div class="lead-metrics"><article><strong>−3.9 pp</strong><h3>Per-trial reward</h3><p>Associated with each +10 pp of main-agent execution-call share, after centering within workloads. 95% CI: −4.8 to −2.9 pp.</p></article><article><strong>−5.2 pp</strong><h3>Task claim coverage</h3><p>For the same +10 pp change in execution-call share. 95% CI: −6.4 to −4.0 pp.</p></article><article><strong>2.0×</strong><h3>Median claim-wait ratio</h3><p>Tasks arriving during main-agent foreground execution wait longer than other tasks in the same trial.</p></article></div>
+    <p class="small">Pre-rebuttal snapshot, Section 4.2. Execution share counts tool calls, not CPU time. These are observational associations, not measured causal effects or a universal rule against main-agent execution. <a href="#main-agent-analysis">See the figure and scope ↓</a></p>
+  </section>
   <section class="film-section" id="demo"><div class="wrap"><div class="section-top"><span class="eyebrow">01 / A REAL WORKLOAD & FOUR FAILURE CASES · 3:06</span><span class="muted">Recorded events · English narration + captions</span></div>
     <video controls playsinline preload="metadata" poster="assets/video-cover.png" aria-label="AOS-Bench animated overview"><source src="assets/aos-bench-overview.mp4" type="video/mp4"><track kind="captions" srclang="en" label="English" src="assets/overview.en.vtt">Your browser does not support embedded video. <a href="assets/aos-bench-overview.mp4">Download the film</a>.</video>
     <div class="under-film"><span>Heavy stream 55dcdddf · Claude Opus 5 / Claude Code · accelerated event replay</span><a href="assets/aos-bench-overview.mp4" download>Download MP4 ↓</a></div>
