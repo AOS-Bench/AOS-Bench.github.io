@@ -52,40 +52,40 @@ Similar isolated ability can produce different workload delivery. Fixed concurre
 For GLM, fixed concurrency of two comes within four points of the best managed policy in each tier.
 
 00:01:38.000 --> 00:01:45.000
-In one heavy run, GLM holds only one task at a time, although all twenty requests arrive within fifteen minutes.
+First, shared-resource contention. Workers handling RStan sampling and Caffe training both encounter package-manager lock errors.
 
 00:01:45.000 --> 00:01:52.000
-CoreWars takes about seventy-six minutes, followed by ninety minutes on audio transcription.
+The RStan installation fails, waits, and retries. The same lock still blocks its dependency setup.
 
 00:01:52.000 --> 00:01:58.000
-After four hours, thirteen tasks remain unclaimed. Sustained effort does not guarantee workload delivery.
+Parallel workers need resource coordination. The effect on final reward is not yet isolated.
 
 00:01:58.000 --> 00:02:05.000
-DeepSeek claims the first request: infer hydrogen-bonded framework topology from crystal files.
+GLM holds only one task at a time, although twenty requests arrive within fifteen minutes.
 
 00:02:05.000 --> 00:02:12.000
-It spends six hours developing and debugging the analysis, without claiming another task.
+CoreWars takes about seventy-six minutes, followed by ninety minutes on audio transcription.
 
 00:02:12.000 --> 00:02:18.000
-The result: zero reported completions, and twenty-nine unclaimed requests.
+After four hours, thirteen tasks remain unclaimed. Effort on individual tasks does not ensure workload delivery.
 
 00:02:18.000 --> 00:02:25.000
-Across identical thirty-task repeats, two Kimi runs report completing every task. Another handles work one at a time.
+DeepSeek claims the first request: infer hydrogen-bonded framework topology from crystal files.
 
 00:02:25.000 --> 00:02:32.000
-Within six hours, the low-delivery run claims six tasks and reports five complete.
+It spends six hours developing and debugging the analysis, without claiming another task.
 
 00:02:32.000 --> 00:02:38.000
-The preprint counts six final completions, but the sixth occurs after the time limit.
+The result: zero reported completions, and twenty-nine unclaimed requests.
 
 00:02:38.000 --> 00:02:45.000
-Opus reports repairing a training dataset, with a validation loss of six point four zero seven and a checkpoint.
+Across identical thirty-task repeats, two Kimi runs report completing every task. Another handles work one at a time.
 
 00:02:45.000 --> 00:02:52.000
-Nine of ten verifier checks pass. But the final workspace contains a modified launcher, which the task forbids.
+Within six hours, the low-delivery run claims six tasks and reports five complete.
 
 00:02:52.000 --> 00:03:00.000
-The task receives zero reward. The edit is not fully attributed; a plausible completion report is not proof of correctness.
+The preprint counts six final completions, but the sixth occurs after the time limit. Workload management can be unstable.
 
 00:03:00.000 --> 00:03:06.000
 Evaluate workload management as a distinct dimension of agent capability.
